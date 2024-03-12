@@ -17,7 +17,7 @@
         <Label  x:Name="PercentageTxt"   Text="Tip Percentage"/>
         <Label  x:Name="PercentageValue"   Text="0%"/>
 
-        <Slider  x:Name="PercentageSlider" Minimum="0" Maximum="100"/>
+        <Slider  x:Name="PercentageSlider" Minimum="0" Maximum="100" ValueChanged="PercentageSlider_ValueChanged"/>
 
         
         <Button

@@ -7,24 +7,19 @@
             InitializeComponent();
         }
          
+        private void PercentageSlider_ValueChanged(object sender, ValueChangedEventArgs e)
+        {
+            PercentageValue.Text = Math.Round(PercentageSlider.Value).ToString();
+        }
+
         private void OnFifteenClicked(object sender, EventArgs e) 
         {
-            double amount = Convert.ToDouble(ValueEntry.Text.ToString());
-            double result = amount * 0.15;
-            double TotalValue2 = result + amount;
-
-            TipValue.Text = result.ToString();
-            TotalValue.Text = TotalValue2.ToString();
+            PercentageSlider.Value = 15;
         }
 
         private void OnTwentyClicked(object sender, EventArgs e) 
         {
-            double amount = Convert.ToDouble(ValueEntry.Text.ToString());
-            double result = amount * 0.2;
-            double TotalValue2 = result + amount;
-
-            TipValue.Text = result.ToString();
-            TotalValue.Text = TotalValue2.ToString();
+            PercentageSlider.Value = 20;
         }
 
         private void OnRoundDownClicked(object sender, EventArgs e)
