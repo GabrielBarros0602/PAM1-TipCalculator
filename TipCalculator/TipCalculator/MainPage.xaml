@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TipCalculator.MainPage">
+
+    <VerticalStackLayout Padding="10.0" Spacing="10.0">
+    
+        
+        <Label  x:Name="HeadLineTip"   Text="Tip Value" SemanticProperties.HeadingLevel="Level1"/>
+
+        <Entry   x:Name="ValueEntry"  Placeholder="Enter Amount"  SemanticProperties.Hint="Type the total value of the bill"/>
+
+        <Label  x:Name='TipTxt'   Text="Tip"/>
+        <Label  x:Name="TipValue"   Text="0.00"/>
+        <Label  x:Name="TotalTxt"   Text="Total"/>
+        <Label  x:Name="TotalValue"   Text="0.00"/>
+        <Label  x:Name="PercentageTxt"   Text="Tip Percentage"/>
+        <Label  x:Name="PercentageValue"   Text="0%"/>
+
+        <Slider  x:Name="PercentageSlider" Minimum="0" Maximum="100"/>
+
+        
+        <Button
+            x:Name="FifteenPercentageBtn"
+            Text="15%"
+            SemanticProperties.Hint="Set the tip value to 15% of the total value"
+            Clicked="OnFifteenClicked"
+            HorizontalOptions="Fill"
+            />
+
+        <Button
+            x:Name="TwentyPercentageBtn"
+            Text="20%"
+            SemanticProperties.Hint="Set the tip value to 20% of the total value"
+            Clicked="OnTwentyClicked"
+            HorizontalOptions="Fill"
+            />
+
+        <Button
+            x:Name="RoundDownBtn"
+            Text="Round Down"
+            SemanticProperties.Hint="Rounds Down the tip value"
+            Clicked="OnRoundDownClicked"
+            HorizontalOptions="Fill"
+            />
+
+        <Button
+            x:Name="RoundUpBtn"
+            Text="Round Up"
+            SemanticProperties.Hint="Rounds Up the tip value"
+            Clicked="OnRoundUpClicked"
+            HorizontalOptions="Fill"
+            />
+
+    </VerticalStackLayout>
+
+</ContentPage>
