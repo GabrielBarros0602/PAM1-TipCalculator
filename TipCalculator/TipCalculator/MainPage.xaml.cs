@@ -51,8 +51,12 @@
             double percent = PercentageSlider.Value;
             
             double result = amount * (percent / 100);
+
             return result;
         }
+
+
+
     }
 
 }

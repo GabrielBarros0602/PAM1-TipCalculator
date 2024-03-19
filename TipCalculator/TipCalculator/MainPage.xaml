@@ -6,42 +6,66 @@
     <VerticalStackLayout Padding="10.0" Spacing="10.0">
     
         
-        <Label  x:Name="HeadLineTip"   Text="Tip Value" SemanticProperties.HeadingLevel="Level1"/>
+        <Label  x:Name="HeadLineTip" Text="Tip Value" SemanticProperties.HeadingLevel="Level1"/>
 
         <Entry   x:Name="ValueEntry"  Placeholder="Enter Amount"  SemanticProperties.Hint="Type the total value of the bill"/>
 
-        <Label  x:Name='TipTxt'   Text="Tip"/>
-        <Label  x:Name="TipValue"   Text="0.00"/>
-        <Label  x:Name="TotalTxt"   Text="Total"/>
-        <Label  x:Name="TotalValue"   Text="0.00"/>
-        <Label  x:Name="PercentageTxt"   Text="Tip Percentage"/>
-        <Label  x:Name="PercentageValue"   Text="0%"/>
+        <HorizontalStackLayout HorizontalOptions="Center" Spacing="173">
+        <Label  x:Name='TipTxt'   Text="Tip:"/>
+        <Label  x:Name="TipValue"   Text=" 0.00"/>
+        </HorizontalStackLayout>
 
+        <HorizontalStackLayout HorizontalOptions="Center" Spacing="160">
+        <Label  x:Name="TotalTxt"   Text="Total:"/> 
+        <Label  x:Name="TotalValue"   Text=" 0.00"/>
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout HorizontalOptions="Center" Spacing="100">
+        <Label  x:Name="PercentageTxt"   Text="Tip Percentage: "/>
+        <Label  x:Name="PercentageValue"   Text=" 0%"/>
+        </HorizontalStackLayout>
+        
         <Slider  x:Name="PercentageSlider" Minimum="0" Maximum="100" ValueChanged="PercentageSlider_ValueChanged"/>
 
-        
-        <Button
+
+
+
+
+        <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+
+            <Button
             x:Name="FifteenPercentageBtn"
             Text="15%"
             SemanticProperties.Hint="Set the tip value to 15% of the total value"
             Clicked="OnFifteenClicked"
-            HorizontalOptions="Fill"
+            HorizontalOptions="StartAndExpand"
+            WidthRequest="125"
+            BorderWidth="2"
+            BorderColor="Black"
             />
 
-        <Button
+            <Button
             x:Name="TwentyPercentageBtn"
             Text="20%"
             SemanticProperties.Hint="Set the tip value to 20% of the total value"
             Clicked="OnTwentyClicked"
-            HorizontalOptions="Fill"
+            HorizontalOptions="EndAndExpand"
+            WidthRequest="125"
+            BorderWidth="2"
+            BorderColor="Black"
             />
+        </HorizontalStackLayout>
 
+        <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
         <Button
             x:Name="RoundDownBtn"
             Text="Round Down"
             SemanticProperties.Hint="Rounds Down the tip value"
             Clicked="OnRoundDownClicked"
-            HorizontalOptions="Fill"
+            HorizontalOptions="StartAndExpand"
+            WidthRequest="125"
+            BorderWidth="2"
+            BorderColor="Black"
             />
 
         <Button
@@ -49,9 +73,15 @@
             Text="Round Up"
             SemanticProperties.Hint="Rounds Up the tip value"
             Clicked="OnRoundUpClicked"
-            HorizontalOptions="Fill"
+            HorizontalOptions="EndAndExpand"
+            WidthRequest="125"
+            BorderWidth="2"
+            BorderColor="Black"
             />
-
+        </HorizontalStackLayout>
+    
+    
+    
     </VerticalStackLayout>
 
 </ContentPage>
